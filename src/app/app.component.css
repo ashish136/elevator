@@ -1,0 +1,14 @@
+
+.main-content{
+    margin-top: 50px;
+}
+.main-row{
+    background-color: #d2d3dc;
+    padding: 20px;
+}
+.controls{
+    border-right: 2px dotted;
+}
+.status > h3{
+    text-align: center;
+}

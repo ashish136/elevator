@@ -1,0 +1,23 @@
+<div class="container main-content">
+  <div class="row main-row">
+      <div class="col-md-6 controls">
+          <div class="form-group">
+        <label for="email">enter floor</label>
+        <input type="number"  placeholder="enter floor" [(ngModel)]="user.floor" />
+      </div>
+          
+          <h5>choose direction</h5>
+          <input type="button" value="up" (click)="user.direction='up'" />
+          <input type="button" value="down" (click)="user.direction='down'" />
+          <input type="button" value="submit" (click)="scheduleLift()" />
+      </div>
+      <div class="col-md-6 status">
+          <h3>Elevator status</h3>
+          <ul>
+              <li>current floor : {{lift.floor}}</li>
+              <li>direction : {{lift.direction}}</li>
+              <li>door status: {{lift.door}}</li>
+          </ul>
+      </div>
+  </div>
+</div>
