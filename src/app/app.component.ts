@@ -20,9 +20,9 @@ export class AppComponent {
   constructor() {
     this.lift = { floor: 0, door: "close", direction: "not moving" };
     this.user = {};
-    this.travelTime=1000;
+    this.travelTime=5000;
     this.timeout= this.travelTime;
-    this.doorTime=3000;
+    this.doorTime=60000;
     this.floorCount=10;
     this.upArr={};
     this.downArr={};

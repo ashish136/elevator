@@ -9,6 +9,13 @@
 .controls{
     border-right: 2px dotted;
 }
-.status > h3{
+ h3{
     text-align: center;
+}
+.up{
+    margin-right : 10px;
+}
+.submit{
+    display:block;
+    margin-top: 20px;
 }
