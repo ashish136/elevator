@@ -23,9 +23,9 @@ export class AppComponent {
   constructor() {
     this.lift = { floor: 0, door: "close", direction: "not moving" };
     this.user = {};
-    this.travelTime = 2000;
+    this.travelTime = 10000;
     this.timeout = this.travelTime;
-    this.doorTime = 8000;
+    this.doorTime = 60000;
     this.floorCount = 10;
     this.maxFloor = 10;
     this.max = -1;
@@ -43,9 +43,9 @@ export class AppComponent {
     clearTimeout(this.timeOutId);
     this.lift = { floor: 0, door: "close", direction: "not moving" };
     this.user = {};
-    this.travelTime = 2000;
+    this.travelTime = 10000;
     this.timeout = this.travelTime;
-    this.doorTime = 8000;
+    this.doorTime = 60000;
     this.floorCount = this.maxFloor;
     this.max = -1;
     this.min = this.floorCount + 1;
