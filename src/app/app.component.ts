@@ -165,7 +165,7 @@ export class AppComponent {
           else this.goDown();
         }
       } else if (this.user.direction == "down") {
-        this.userArr[this.user.floor].up++;
+        this.userArr[this.user.floor].down++;
         if (this.user.floor < this.min) this.min = this.user.floor;
         if (this.user.floor > this.max) this.max = this.user.floor;
         if (this.lift.direction == "not moving") {
