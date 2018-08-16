@@ -1,34 +1,41 @@
-
 <div class="container main-content">
     <div class="row">
-        <div class="col-md-5"></div>
-            <div class="col-md-3">
-                    <div class="form-group">
-                            <label for="flooNo"><h5>enter max floors</h5></label>
-                            <input type="number" id="flooCount" class="form-control" placeholder="configure floor" [(ngModel)]="floorCount" />
-                          </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <!-- <label for="flooNo">
+                    <h5>enter max floors</h5>
+                </label> -->
+                <input type="number" id="flooCount" class="form-control" placeholder="enter max floor" [(ngModel)]="maxFloor" />
             </div>
+        </div>
+        <div class="col-md-3">
+            <input type="button" class="btn reset" value="Reset max floor" (click)="reset()" />
+        </div>
     </div>
-  <div class="row main-row">
-      <div class="col-md-6 controls">
+    <div class="row main-row">
+        <div class="col-md-6 controls">
             <h3>controls</h3>
-          <div class="form-group">
-        <label for="flooNo"><h5>enter floor</h5></label>
-        <input type="number" id="flooNo" class="form-control" placeholder="enter floor" [(ngModel)]="user.floor" />
-      </div>
-          
-          <h5>choose direction</h5>
-          <input type="button" class="up btn" value="up" (click)="user.direction='up'" />
-          <input type="button" class="btn" value="down" (click)="user.direction='down'" />
-          <input type="button" class="submit btn btn-primary" value="submit" (click)="scheduleLift()" />
-      </div>
-      <div class="col-md-6 status">
-          <h3>Elevator status</h3>
-          <ul>
-              <li>current floor : {{lift.floor}}</li>
-              <li>direction : {{lift.direction}}</li>
-              <li>door status: {{lift.door}}</li>
-          </ul>
-      </div>
-  </div>
+            <div class="form-group">
+                <label for="flooNo">
+                    <h5>enter floor</h5>
+                </label>
+                <input type="number" id="flooNo" class="form-control" placeholder="enter floor" [(ngModel)]="user.floor" />
+            </div>
+
+            <h5>choose direction</h5>
+            <input type="button" class="up btn" value="up" (click)="user.direction='up'" />
+            <input type="button" class="btn" value="down" (click)="user.direction='down'" />
+            <input type="button" class="submit btn btn-primary" value="submit" (click)="scheduleLift()" />
+            <p *ngIf="showErr">{{this.errMsg}}</p>
+        </div>
+        <div class="col-md-6 status">
+            <h3>Elevator status</h3>
+            <ul>
+                <li>current floor : {{lift.floor}}</li>
+                <li>direction : {{lift.direction}}</li>
+                <li>door status: {{lift.door}}</li>
+            </ul>
+        </div>
+    </div>
 </div>
